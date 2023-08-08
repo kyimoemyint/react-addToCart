@@ -13,6 +13,7 @@ export default function Cart() {
 
   return (
     <div>
+      <h2 className="text-center p-4">Cart List</h2>
       <div className="cart-container">
         {
           PRODUCTS.map((product) => {

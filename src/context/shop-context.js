@@ -18,11 +18,13 @@ const defaultBadge = () => {
 export default function ShopContextProvider(props) {
   const [badge, setBadge] = useState(() => {
     let badge = localStorage.getItem('badge');
+    if(badge === null) return 0;
     return JSON.parse(badge);
   });
 
   const [cartItems, setCartItems] = useState(() => {
     let localValue = localStorage.getItem("item");
+    if(localValue === null) return {};
     return JSON.parse(localValue);
   });
 
